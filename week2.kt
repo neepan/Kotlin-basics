@@ -22,3 +22,15 @@ transaction?.let{
     println("${it.amount}")
     println("Transaction Loaded")
 }
+
+//-------------------------------
+
+@Composable
+fun QuickAddExpense(){
+
+var balance by remember {mutableStateOf(0.0)}
+
+Button(onClick={balance+=100.0}){
+ Text("Total Spent: $balance")
+}
+}
